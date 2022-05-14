@@ -16,9 +16,6 @@ import org.apache.logging.log4j.core.layout.PatternLayout;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import steps.BeforeAfterSteps;
-
-
 import java.io.File;
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -51,7 +48,6 @@ public class Driver {
         final Layout layout = PatternLayout.createDefaultLayout(config);
         Appender appender = FileAppender.createAppender(path+"\\"+sc+"_"+dt+".log", "false", "false", "File", "true",
                 "false", "true", "4000", layout, null, "false", null, config);
-
         appender.start();
         config.addAppender(appender);
         AppenderRef ref = AppenderRef.createAppenderRef("File", null, null);
