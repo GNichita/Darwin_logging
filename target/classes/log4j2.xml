@@ -1,0 +1,32 @@
+<Configuration status="INFO" >
+
+    <!-- Logging Properties -->
+    <Properties>
+        <Property name="LOG_PATTERN">%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} %p %m%n</Property>
+        <Property name="APP_LOG_ROOT">src/test/java/ScenariosLoging/</Property>
+
+    </Properties>
+
+    <Appenders>
+
+        <!-- Console Appender -->
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+
+
+
+
+    </Appenders>
+
+    <Loggers>
+
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+
+        </Root>
+        <Logger name="cucumber.api.cli.Main" level="INFO">
+        </Logger>
+    </Loggers>
+
+</Configuration>
