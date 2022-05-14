@@ -38,7 +38,7 @@ public class Driver {
     public static void addAppender(Scenario scenario){
         String dateTime = LocalDateTime.now().toString();
         String dt = dateTime.replaceAll(":","_");
-        String sc =scenario.getName().replaceAll("\\s","_");
+        String sc = scenario.getName().replaceAll("\\s","_");
         String path ="C:\\Users\\Никита\\IdeaProjects\\Loging\\src\\test\\java\\ScenariosLogging\\"+sc;
         File scenarioFolder = new File(path);
         scenarioFolder.mkdir();
